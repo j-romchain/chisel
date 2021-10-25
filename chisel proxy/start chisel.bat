@@ -1,0 +1,1 @@
+chisel.exe client --auth user:pass https://chisle.herokuapp.com socks
