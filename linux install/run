@@ -1,0 +1,3 @@
+#!/bin/sh
+chisel client --auth user:pass https://chisle.herokuapp.com socks
+wait
