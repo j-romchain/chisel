@@ -4,4 +4,5 @@ RUN chmod +x /bin/chisel
 RUN useradd -m heroku
 USER heroku
 EXPOSE 5000
-CMD dig +short txt ch whoami.cloudflare @1.0.0.1;chisel server --auth $CHISEL_AUTH --socks5 --reverse
+CMD dig +short txt ch whoami.cloudflare @1.0.0.1
+CMD chisel server --auth $CHISEL_AUTH --socks5 --reverse
