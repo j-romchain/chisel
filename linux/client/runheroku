@@ -1,5 +1,6 @@
 #!/bin/bash
-cd $(dirname $BASH_SOURCE)
+echo "going to directory:" "${BASH_SOURCE%/*}"
+cd "${BASH_SOURCE%/*}" || echo "error"
 curl -sSL https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz | zcat > ./chisel
 chmod +x chisel
 ./chisel client --auth user:pass https://chisle.herokuapp.com socks
